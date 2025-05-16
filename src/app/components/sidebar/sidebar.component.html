@@ -1,0 +1,23 @@
+<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop" style="background-color: white; color: black; border: none; padding-top: 10px;">
+    <i class="bi bi-list"></i>
+  </button>
+
+  <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
+    <div class="offcanvas-header ">
+      <img src="img/ford.png" alt="Logo Ford" class="logo-ford">
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body p-4">
+
+      <nav id="home" (click)="goToHome()">
+        <i class="bi bi-house-fill"></i>
+        <label>Home</label>
+      </nav>
+
+      <nav id=dashboard (click)="goToDashboard()">
+        <i class="bi bi-bar-chart-fill"></i>
+        <label>DashBoard</label>
+      </nav>
+
+    </div>
+  </div>

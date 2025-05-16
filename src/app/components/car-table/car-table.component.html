@@ -1,0 +1,24 @@
+<table class="table" style="width: 60%;">
+  <thead>
+    <tr>
+      <th scope="col">Código - Vin</th>
+      <th scope="col">Odômetro</th>
+      <th scope="col">Nível de Combustível</th>
+      <th scope="col">Status</th>
+      <th scope="col">Lat.</th>
+      <th scope="col">Long.</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="d-flex">
+        <input (change)="onChangeVin($event)" class="input-vin" type="text" placeholder="{{ vin }}" value="{{ vin }}">
+      </td>
+      <td>{{ odometro }}Km</td>
+      <td>{{ nivelCombustivel }}%</td>
+      <td>{{ status.toUpperCase() }}</td>
+      <td>{{ lat }}</td>
+      <td>{{ long }}</td>
+    </tr>
+  </tbody>
+</table>

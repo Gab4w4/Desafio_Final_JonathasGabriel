@@ -1,0 +1,95 @@
+.form_container{
+  position: absolute;
+  right: 0;
+  height: 100%;
+  width: 50%;
+  display: flex;
+  background-image: url(/img/backgroundForm1.avif);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.backdrop{
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 100%;
+}
+
+.telaLogin{
+    height: 100dvh;
+    display: flex;
+}
+
+.image{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.IlustracaoTelaLogin{
+  width: 70%;
+  height: auto;
+}
+
+.form_login {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.boasVindas{
+    font-size: 40px;
+    margin: 70px;
+}
+
+.inputIn{
+  width: 400px;
+  height: 35px;
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+}
+
+.input-wrapper{
+  background-color: white;
+  border-radius: 5px;
+  padding-right: 5px;
+}
+
+.buttonEnviar{
+  background-color: #1b357e;
+  width: 400px;
+  height: 35px;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: transform .2s;
+}
+
+.buttonEnviar:hover{
+  background-color: #0d2566;
+  transform: scale(0.97);
+}
+
+.checkbox{
+  width: 30px;
+  height: 30px;
+}
+
+.logo-ford{
+  display: flex;
+  width: 180px;
+  height: 80px;
+}
+
+.login-container{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

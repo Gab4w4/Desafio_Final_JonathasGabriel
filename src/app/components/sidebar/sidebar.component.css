@@ -1,0 +1,25 @@
+.logo-ford{
+    width: 180px;
+    height: 80px;
+  }
+
+  i{
+    font-size: 30px;
+  }
+
+  .offcanvas-body label{
+    margin-left: 10px;
+  }
+
+  .btn-primary i{
+    margin: 10px;
+  }
+
+  .offcanvas-header{
+    padding-left: 80px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.329);
+  }
+
+  .offcanvas-body nav, i, label{
+    cursor: pointer;
+  }
