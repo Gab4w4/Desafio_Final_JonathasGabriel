@@ -1,3 +1,7 @@
+body{
+  height: 100vh;
+}
+
 .btn-danger{
   position: absolute;
   top: 10px;
