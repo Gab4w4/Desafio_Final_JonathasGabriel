@@ -1,21 +1,21 @@
-<form [formGroup]="loginForm" class="form_login" (ngSubmit)="buttonLogin()">
-    <img src="img/ford.png" alt="Logo Ford" class="logo-ford">
+<form [formGroup]="loginForm" (ngSubmit)="buttonLogin()" class="form_login">
+          <img src="img/ford.png" alt="Logo Ford" class="logo-ford">
 
-    <p class="boasVindas">Boas vindas</p>
+          <p class="boasVindas">Boas vindas</p>
 
-    <div class="login-container">
-      <label>Email:</label>
-      <input formControlName="nome" type="email" class="form-control" id="staticEmail" placeholder="Insira seu email">
+          <div class="login-container">
+            <label>Email:</label>
+            <input formControlName="nome" type="email" class="form-control" id="staticEmail" placeholder="Insira seu email" required>
 
 
-      <label>Senha:</label> 
-        <input formControlName="senha" type="password" class="form-control" id="inputPassword" placeholder="Insira sua senha">
+            <label>Senha:</label> 
+              <input formControlName="senha" type="password" class="form-control" id="inputPassword" placeholder="Insira sua senha" required>
 
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" role="switch" id="switchCheckDefault">
-        <label class="form-check-label" for="switchCheckDefault">Login automático</label>
-      </div>
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" role="switch" id="switchCheckDefault">
+              <label class="form-check-label" for="switchCheckDefault">Login automático</label>
+            </div>
 
-      <button type="submit" class="buttonEnviar">Entrar</button>
-  </div>
-</form>
+            <button type="submit" class="buttonEnviar">Entrar</button>
+        </div>
+      </form>

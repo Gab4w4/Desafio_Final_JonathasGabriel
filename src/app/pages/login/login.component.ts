@@ -1,46 +1,15 @@
-import { Component, inject } from '@angular/core';
-import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { LoginService } from '../../services/login.service';
-import { Router } from '@angular/router';
+import { Component } from '@angular/core';
+import { LoginFormComponent } from '../../components/login-form/login-form.component';
+import { CarouselComponent } from '../../components/carousel/carousel.component';
+
 
 @Component({
   selector: 'app-login',
-  imports: [ReactiveFormsModule],
+  imports: [LoginFormComponent, CarouselComponent],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
 
 export class LoginComponent {
-  loginService = inject(LoginService)
-  router = inject(Router)
   
-  loginForm = new FormGroup({
-    nome: new FormControl("", [Validators.required]),
-    senha: new FormControl("", [Validators.required])
-  })
-
-  buttonLogin(){
-    const { nome, senha } = this.loginForm.value
-
-    if(!this.loginForm.valid || !nome || !senha){
-      alert("Existem campos não preenchidos!")
-      return
-    }
-
-    this.loginService.login(nome, senha).subscribe({
-
-      error: (err) => {
-        if(err.status === 401){
-          alert("O usuário e/ou senha incorretos!")
-          return
-        }
-          alert("Erro interno! Tente novamente mais tarde...")
-      },
-
-      next: () => {
-        this.router.navigate(["/home"])
-      }
-      
-    })
-  }
 }

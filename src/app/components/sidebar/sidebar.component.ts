@@ -16,4 +16,8 @@ export class SidebarComponent {
   goToDashboard(){
     this.router.navigate(["dashboard"])
   }
+
+  goToContact(){
+    this.router.navigate(["contact"])
+  }
 }

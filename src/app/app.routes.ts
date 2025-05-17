@@ -27,5 +27,14 @@ export const routes: Routes = [
             return import("./pages/dashboard/dashboard.component")
             .then(c => c.DashboardComponent)
         }
+    },
+    {
+        path: "contact",
+        pathMatch: "full",
+        canActivate: [loginGuard],
+        loadComponent:  () => {
+            return import("./pages/contact/contact.component")
+            .then(c => c.ContactComponent)
+        }
     }
 ];
