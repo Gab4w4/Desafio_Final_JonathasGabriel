@@ -6,10 +6,11 @@ import { Veiculo, VinInfos } from '../../models/car';
 import { SidebarComponent } from '../../components/sidebar/sidebar.component';
 import { Router } from '@angular/router';
 import { FooterComponent } from '../../components/footer/footer.component';
+import { LogoutComponent } from '../../components/logout/logout.component';
 
 @Component({
   selector: 'app-dashboard',
-  imports: [CardComponent, CarTableComponent, SidebarComponent, FooterComponent],
+  imports: [CardComponent, CarTableComponent, SidebarComponent, FooterComponent, LogoutComponent],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.css'
 })
@@ -56,8 +57,4 @@ export class DashboardComponent implements OnInit{
     })
   }
 
-  logout(){
-    sessionStorage.clear()
-    this.router.navigate([""])
-  }
 }

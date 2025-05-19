@@ -1,8 +1,81 @@
-.input-vin{
-  width: 260px;
+.input-vin {
+  width: 100%;
+  min-width: 150px;
+  max-width: 260px;
   border-radius: 8px;
   border: 1px solid rgba(128, 128, 128, 0.326);
-  padding: 5px;
-  margin-left: 10px;
+  padding: 8px;
+  margin: 0 10px;
+  box-sizing: border-box;
 }
 
+.table {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+/* Transformação para mobile */
+@media (max-width: 768px) {
+  .table, .table thead, .table tbody, 
+  .table th, .table td, .table tr {
+    display: block;
+    width: 100%;
+  }
+  
+  .table thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  
+  .table tr {
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 12px;
+  }
+  
+  .table td {
+    border: none;
+    display: flex;
+    flex-direction: column; 
+    padding: 8px 10px !important; 
+    margin-bottom: 5px;
+  }
+  
+  .table td:before {
+    position: relative;
+    left: 0;
+    width: 100%;
+    padding-right: 0;
+    white-space: normal; 
+    font-weight: bold;
+    content: attr(data-label);
+    margin-bottom: 3px;
+    font-size: 0.85em;
+    color: #555;
+  }
+  
+  .input-vin {
+    max-width: 100%;
+    margin: 5px 0;
+  }
+  
+  .table td.d-flex {
+    padding-left: 10px !important;
+  }
+  
+  .table td.d-flex:before {
+    content: none;
+  }
+  
+  .table td[data-label="Nível de Combustível"]:before {
+    content: "Combustível"; 
+  }
+  
+  .table td[data-label="Código - Vin"]:before {
+    content: "Vin";
+  }
+}

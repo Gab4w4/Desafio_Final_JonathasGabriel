@@ -1,5 +1,6 @@
 <app-sidebar></app-sidebar>
-<button (click)="logout()" class="btn btn-danger">Logout</button>
+<app-logout></app-logout>
+
 <section class="cards">
   <div class="select-dashboard">
     <h2>Veículos</h2>
@@ -15,13 +16,9 @@
   <app-card [titulo]="'Updates Software'" [valor]="veiculoSelecionado.softwareUpdates"></app-card>
 </section>
 
-<br><br>
-
 <section class="dashboard-image">
   <img src="{{ veiculoSelecionado.img }}" alt="Modelo dos carros">
 </section>
-
-<br><br>
 
 <section class="section-table">
   <app-car-table

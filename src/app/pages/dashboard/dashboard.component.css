@@ -1,49 +1,84 @@
-
-.cards{
+.cards {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 10px;
+  padding: 10px;
 }
 
-.select-dashboard{
-  box-shadow: 4px 4px 4px 2px rgba(128, 128, 128, 0.305);
-  width: 300px;
-  height: 200px;
-  margin: 10px;
+.select-dashboard h2 {
+  font-size: larger;
+}
+
+.select-dashboard {
+  box-shadow: 1px 1px 2px 2px rgba(128, 128, 128, 0.494);
+  width: 100%;
+  max-width: 200px;
+  height: 100px;
+  margin: 5px;
   border-radius: 8px;
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
-  align-items: center;
 }
 
-.dashboard-image{
-  width: auto;
+.dashboard-image {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 10px;
 }
 
-.dashboard-image img{
-  width: 50%;
+.dashboard-image img {
+  width: 100%;
+  max-width: 50%;
+  height: auto;
 }
 
-.section-table{
+.section-table {
   display: flex;
   justify-content: center;
+  width: 100%;
+  padding: 10px;
 }
 
-.btn-danger{
-  position: absolute;
-  top: 10px;
-  right: 10px;
-}
-
-.select-input{
-  width: 150px;
+.select-input {
+  width: 90%;
+  max-width: 150px;
   border-radius: 8px;
   border: 1px solid rgba(128, 128, 128, 0.326);
   padding: 5px;
-  margin-left: 10px;
+  margin: 5px;
+}
+
+/* Adicionando media queries para responsividade */
+@media (max-width: 768px) {
+  .select-dashboard {
+    max-width: 180px;
+    height: 90px;
+  }
+  
+  .dashboard-image img {
+    max-width: 70%;
+  }
+}
+
+@media (max-width: 480px) {
+  .select-dashboard {
+    max-width: 160px;
+    height: 80px;
+    font-size: 14px;
+  }
+  
+  .dashboard-image img {
+    max-width: 90%;
+  }
+  
+  .select-input {
+    max-width: 130px;
+  }
 }

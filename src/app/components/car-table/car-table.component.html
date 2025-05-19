@@ -1,4 +1,4 @@
-<table class="table" style="width: 60%;">
+<table class="table">
   <thead>
     <tr>
       <th scope="col">Código - Vin</th>
@@ -11,14 +11,14 @@
   </thead>
   <tbody>
     <tr>
-      <td class="d-flex">
+      <td class="d-flex" data-label="Código - Vin">
         <input (change)="onChangeVin($event)" class="input-vin" type="text" placeholder="{{ vin }}" value="{{ vin }}">
       </td>
-      <td>{{ odometro }}Km</td>
-      <td>{{ nivelCombustivel }}%</td>
-      <td>{{ status.toUpperCase() }}</td>
-      <td>{{ lat }}</td>
-      <td>{{ long }}</td>
+      <td data-label="Odômetro">{{ odometro }}Km</td>
+      <td data-label="Nível de Combustível">{{ nivelCombustivel }}%</td>
+      <td data-label="Status">{{ status.toUpperCase() }}</td>
+      <td data-label="Lat.">{{ lat }}</td>
+      <td data-label="Long.">{{ long }}</td>
     </tr>
   </tbody>
 </table>
