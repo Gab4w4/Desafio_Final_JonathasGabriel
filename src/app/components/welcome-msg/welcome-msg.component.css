@@ -18,7 +18,7 @@
   box-shadow: 4px 4px 4px 2px rgba(128, 128, 128, 0.494);
   text-align: justify;
   border-radius: 8px;
-  padding: 30px;
+  padding: 20px;
   max-width: 500px;
   max-height: auto;
 }
@@ -27,3 +27,10 @@
   display: flex;
   justify-content: center;
  }
+
+@media(max-width:1100px){
+  .logo-ford{
+    width: 130px;
+    height: 65px;
+  }
+}

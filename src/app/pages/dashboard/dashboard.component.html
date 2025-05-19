@@ -1,41 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
-  <app-sidebar></app-sidebar>
-  <button (click)="logout()" class="btn btn-danger">Logout</button>
-  <section class="cards">
-    <div class="select-dashboard">
-      <h2>Veículos</h2>
-      <select (change)="onChangeSelect($event)" class="select-input">
-        @for(v of veiculos; track v.id){
-          <option value="{{ v.id }}">{{ v.vehicle }}</option>
-        }
-      </select>
-    </div>
+<app-sidebar></app-sidebar>
+<button (click)="logout()" class="btn btn-danger">Logout</button>
+<section class="cards">
+  <div class="select-dashboard">
+    <h2>Veículos</h2>
+    <select (change)="onChangeSelect($event)" class="select-input">
+      @for(v of veiculos; track v.id){
+        <option value="{{ v.id }}">{{ v.vehicle }}</option>
+      }
+    </select>
+  </div>
 
-    <app-card [titulo]="'Total de Vendas'" [valor]="veiculoSelecionado.volumetotal"></app-card>
-    <app-card [titulo]="'Conectados'" [valor]="veiculoSelecionado.connected"></app-card>
-    <app-card [titulo]="'Updates Software'" [valor]="veiculoSelecionado.softwareUpdates"></app-card>
-  </section>
+  <app-card [titulo]="'Total de Vendas'" [valor]="veiculoSelecionado.volumetotal"></app-card>
+  <app-card [titulo]="'Conectados'" [valor]="veiculoSelecionado.connected"></app-card>
+  <app-card [titulo]="'Updates Software'" [valor]="veiculoSelecionado.softwareUpdates"></app-card>
+</section>
 
-  <br><br>
+<br><br>
 
-  <section class="dashboard-image">
-    <img src="{{ veiculoSelecionado.img }}" alt="Modelo dos carros">
-  </section>
+<section class="dashboard-image">
+  <img src="{{ veiculoSelecionado.img }}" alt="Modelo dos carros">
+</section>
 
-  <br><br>
+<br><br>
 
-  <section class="section-table">
-    <app-car-table
-    [vin]="veiculoSelecionado.vin"
-    [lat] = "vinInfos.lat"
-    [long] = "vinInfos.long"
-    [nivelCombustivel] = "vinInfos.nivelCombustivel"
-    [odometro] = "vinInfos.odometro"
-    [status] = "vinInfos.status"
-    ></app-car-table>
-  </section>
-  
-  <app-footer></app-footer>
+<section class="section-table">
+  <app-car-table
+  [vin]="veiculoSelecionado.vin"
+  [lat] = "vinInfos.lat"
+  [long] = "vinInfos.long"
+  [nivelCombustivel] = "vinInfos.nivelCombustivel"
+  [odometro] = "vinInfos.odometro"
+  [status] = "vinInfos.status"
+  ></app-car-table>
+</section>
 
-</html>
+<app-footer></app-footer>

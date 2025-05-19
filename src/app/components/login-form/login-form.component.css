@@ -11,10 +11,11 @@
 .boasVindas{
     font-size: 40px;
     margin: 70px;
+    cursor: auto;
 }
 
 .inputIn{
-  width: 400px;
+  width: auto;
   height: 35px;
   border-radius: 5px;
   border: none;
@@ -29,7 +30,6 @@
 
 .buttonEnviar{
   background-color: #1b357e;
-  width: 400px;
   height: 35px;
   color: white;
   border-radius: 5px;
@@ -56,6 +56,34 @@
 
 .login-container{
   display: flex;
+  padding: 30px;
   flex-direction: column;
+  width: 80%;
+  height: auto;
   gap: 10px;
+}
+
+@media(max-width : 750px){
+
+  .login-container{
+    padding: 10px;
+  }
+
+  .boasVindas{
+    font-size: 30px;
+    margin: 35px;
+  }
+
+  .logo-ford{
+  width: 130px;
+  height: 65px;
+}
+}
+
+@media(max-width : 500px){
+  .boasVindas{
+    font-size: 20px;
+    margin: 20px;
+    margin-top: 50px;
+  }
 }
