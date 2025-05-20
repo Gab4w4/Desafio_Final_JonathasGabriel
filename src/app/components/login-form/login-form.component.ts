@@ -40,7 +40,7 @@ export class LoginFormComponent {
       next: () => {
         this.router.navigate(["/home"])
       }
-      
+
     })
   }
 }

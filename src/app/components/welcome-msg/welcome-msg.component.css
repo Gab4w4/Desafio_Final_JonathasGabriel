@@ -3,19 +3,38 @@
   height: 80px;
 }
 
-.container-welcomeText{
-  border-radius: 8px;
-  width: 100%;
-  height: 100%;
+.image {
+  background-image: url(/img/backgroudHome1.jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: 70vh;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.container-welcomeText{
+  min-width: 400px;
+  background-color: white;
+  border-radius: 8px;
+  padding: 10px;
+  width: 40%;
   gap: 10px;
+  opacity: 0.8;
+  display: flex;
+  font-weight: bold;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  box-shadow: 4px 4px 4px 2px rgba(128, 128, 128, 0.494);
+}
+
+#msg{
+  background-color: white;
 }
 
 .welcomeText{
-  box-shadow: 4px 4px 4px 2px rgba(128, 128, 128, 0.494);
   text-align: justify;
   border-radius: 8px;
   padding: 20px;
@@ -29,8 +48,15 @@
  }
 
 @media(max-width:1100px){
+
   .logo-ford{
     width: 130px;
     height: 65px;
   }
 }
+@media(max-width:580px){
+  .container-welcomeText{
+    min-width: 300px;
+  }
+}
+
