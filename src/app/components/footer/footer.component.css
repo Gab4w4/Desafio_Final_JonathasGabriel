@@ -1,9 +1,8 @@
 footer {
-    width: 100%;    
+    width: 100%;
     padding: 10px;
     background: #1b357e;
-    z-index: 10;
-  }
+}
 
 .copyright {
     color: white;
@@ -26,7 +25,7 @@ footer h2 {
     padding: 5px;
     margin-left: 15px;
     align-items: center;
-    margin-right: 20px; 
+    margin-right: 20px;
 }
 
 .iconesRodape {
@@ -92,4 +91,9 @@ footer h2 {
         justify-content: center;
         flex-direction: row;
     }
+}
+@media(max-width:700px){
+  footer{
+    position: static;
+  }
 }

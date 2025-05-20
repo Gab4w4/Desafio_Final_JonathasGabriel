@@ -1,34 +1,36 @@
 <app-sidebar></app-sidebar>
 <app-logout></app-logout>
 
-<section class="cards">
-  <div class="select-dashboard">
-    <h2>Veículos</h2>
-    <select (change)="onChangeSelect($event)" class="select-input">
-      @for(v of veiculos; track v.id){
-        <option value="{{ v.id }}">{{ v.vehicle }}</option>
-      }
-    </select>
-  </div>
+<main>
+  <section class="cards">
+    <div class="select-dashboard">
+      <h2>Veículos</h2>
+      <select (change)="onChangeSelect($event)" class="select-input">
+        @for(v of veiculos; track v.id){
+          <option value="{{ v.id }}">{{ v.vehicle }}</option>
+        }
+      </select>
+    </div>
 
-  <app-card [titulo]="'Total de Vendas'" [valor]="veiculoSelecionado.volumetotal"></app-card>
-  <app-card [titulo]="'Conectados'" [valor]="veiculoSelecionado.connected"></app-card>
-  <app-card [titulo]="'Updates Software'" [valor]="veiculoSelecionado.softwareUpdates"></app-card>
-</section>
+    <app-card [titulo]="'Total de Vendas'" [valor]="veiculoSelecionado.volumetotal"></app-card>
+    <app-card [titulo]="'Conectados'" [valor]="veiculoSelecionado.connected"></app-card>
+    <app-card [titulo]="'Updates Software'" [valor]="veiculoSelecionado.softwareUpdates"></app-card>
+  </section>
 
-<section class="dashboard-image">
-  <img src="{{ veiculoSelecionado.img }}" alt="Modelo dos carros">
-</section>
+  <section class="dashboard-image">
+    <img src="{{ veiculoSelecionado.img }}" alt="Modelo dos carros">
+  </section>
 
-<section class="section-table">
-  <app-car-table
-  [vin]="veiculoSelecionado.vin"
-  [lat] = "vinInfos.lat"
-  [long] = "vinInfos.long"
-  [nivelCombustivel] = "vinInfos.nivelCombustivel"
-  [odometro] = "vinInfos.odometro"
-  [status] = "vinInfos.status"
-  ></app-car-table>
-</section>
+  <section class="section-table">
+    <app-car-table
+    [vin]="veiculoSelecionado.vin"
+    [lat] = "vinInfos.lat"
+    [long] = "vinInfos.long"
+    [nivelCombustivel] = "vinInfos.nivelCombustivel"
+    [odometro] = "vinInfos.odometro"
+    [status] = "vinInfos.status"
+    ></app-car-table>
+  </section>
+</main>
 
 <app-footer></app-footer>
