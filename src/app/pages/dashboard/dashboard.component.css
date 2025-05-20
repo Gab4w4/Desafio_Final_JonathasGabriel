@@ -1,3 +1,10 @@
+app-header{
+  display: block;
+}
+app-sidebar{
+  display: none;
+}
+
 main{
   margin-bottom: 20vh;
 }
@@ -64,6 +71,16 @@ main{
     margin-bottom: 25vh;
   }
 }
+
+@media(max-width:800px){
+  app-header{
+      display: none;
+  }
+  app-sidebar{
+      display: block;
+  }
+}
+
 
 @media (max-width: 768px) {
   .select-dashboard {

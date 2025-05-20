@@ -1,13 +1,13 @@
-import { Router } from '@angular/router';
 import { Component, inject } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-sidebar',
+  selector: 'app-header',
   imports: [],
-  templateUrl: './sidebar.component.html',
-  styleUrl: './sidebar.component.css'
+  templateUrl: './header.component.html',
+  styleUrl: './header.component.css'
 })
-export class SidebarComponent {
+export class HeaderComponent {
   router = inject(Router)
   goToHome(){
     this.router.navigate(["home"])

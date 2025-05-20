@@ -1,6 +1,7 @@
 .logo-ford{
-  width: 180px;
-  height: 80px;
+  width: 140px;
+  height: 70px;
+  margin-bottom: 10px;
 }
 
 .image {
@@ -12,6 +13,7 @@
   justify-content: center;
   align-items: center;
   margin-top: 40px;
+  width: 100%;
 }
 
 .container-welcomeText{
@@ -19,7 +21,6 @@
   background-color: white;
   border-radius: 8px;
   padding: 10px;
-  width: 40%;
   gap: 10px;
   opacity: 0.8;
   display: flex;
@@ -28,10 +29,6 @@
   align-items: center;
   flex-direction: column;
   box-shadow: 4px 4px 4px 2px rgba(128, 128, 128, 0.494);
-}
-
-#msg{
-  background-color: white;
 }
 
 .welcomeText{
@@ -47,16 +44,66 @@
   justify-content: center;
  }
 
+
+
 @media(max-width:1100px){
 
+  .container-welcomeText{
+    max-width: 300px;
+    height: 250px;
+  }
+
+  strong{
+    font-size: 23px;
+  }
+
+  .welcomeText{
+    padding: 10px;
+  }
+
   .logo-ford{
-    width: 130px;
-    height: 65px;
+    width: 100px;
+    height: 50px;
+    margin: 0;
+  }
+
+  .image{
+    min-height: 60vh;
+    margin-top: 30px;
   }
 }
+
+@media(max-width: 938px) {
+  .image{
+    min-height: 50vh;
+    margin-top: 30px;
+  }
+
+  
+}
+
 @media(max-width:580px){
   .container-welcomeText{
     min-width: 300px;
   }
+  
 }
 
+
+
+
+
+@media(max-width: 480px) {
+  .image {
+    min-height: 40vh; 
+  }
+
+  strong{
+    font-size: 18px;
+  }
+
+  .welcomeText {
+    font-size: 0.9rem;
+    margin: 0;
+  }
+}

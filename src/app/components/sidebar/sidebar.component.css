@@ -78,3 +78,10 @@ i{
 .offcanvas-body nav, i, label{
   cursor: pointer;
 }
+
+@media(max-width:600px){
+  .btn-primary i{
+    padding: 20px;
+    font-size: 25px;
+  }
+}

@@ -1,4 +1,19 @@
+app-header{
+  display: block;
+}
+app-sidebar{
+  display: none;
+}
+
 html{
   min-height: 100vh;
 }
 
+@media(max-width:800px){
+  app-header{
+      display: none;
+  }
+  app-sidebar{
+      display: block;
+  }
+}

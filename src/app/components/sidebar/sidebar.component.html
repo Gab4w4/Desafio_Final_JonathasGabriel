@@ -10,18 +10,23 @@
     <div class="offcanvas-body p-4">
 
       <nav id="home" (click)="goToHome()">
-        <i class="bi bi-house-fill"></i>
+        <i class="bi bi-house"></i>
         <label>Home</label>
       </nav>
 
       <nav id=dashboard (click)="goToDashboard()">
-        <i class="bi bi-bar-chart-fill"></i>
+        <i class="bi bi-bar-chart"></i>
         <label>DashBoard</label>
       </nav>
 
       <nav id=contact (click)="goToContact()">
-        <i class="bi bi-chat-left-fill"></i>
+        <i class="bi bi-chat-left"></i>
         <label>Contato</label>
+      </nav>
+      
+      <nav id=contact (click)="logout()">
+        <i class="bi bi-box-arrow-right"></i>
+        <label>Sair</label>
       </nav>
     </div>
   </div>

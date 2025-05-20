@@ -6,11 +6,11 @@ import { Veiculo, VinInfos } from '../../models/car';
 import { SidebarComponent } from '../../components/sidebar/sidebar.component';
 import { Router } from '@angular/router';
 import { FooterComponent } from '../../components/footer/footer.component';
-import { LogoutComponent } from '../../components/logout/logout.component';
+import { HeaderComponent } from '../../components/header/header.component';
 
 @Component({
   selector: 'app-dashboard',
-  imports: [CardComponent, CarTableComponent, SidebarComponent, FooterComponent, LogoutComponent],
+  imports: [CardComponent, CarTableComponent, SidebarComponent, FooterComponent,  HeaderComponent],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.css'
 })
