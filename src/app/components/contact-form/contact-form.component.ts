@@ -20,7 +20,8 @@ export class ContactFormComponent {
       email: ['', [Validators.required, Validators.email]],
       telefone: ['', Validators.required],
       tipoContato: ['', Validators.required],
-      mensagem: ['', Validators.required]
+      mensagem: ['', Validators.required],
+      termosAceitos: [false, Validators.requiredTrue]
     });
   }
 

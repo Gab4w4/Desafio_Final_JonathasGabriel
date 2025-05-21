@@ -2,26 +2,26 @@
     <h2>Sobre você</h2>
     
     <label>Nome:</label>
-    <input formControlName="nome" type="text" placeholder="NOME*" id="nome">
+    <input formControlName="nome" type="text" placeholder="NOME*" id="nome" class="cssInput">
     <div *ngIf="contactForm.get('nome')?.invalid && contactForm.get('nome')?.touched" class="error-message">
         Nome é obrigatório
     </div>
     
     <label>E-mail:</label>
-    <input formControlName="email" type="email" placeholder="E-MAIL*" id="email">
+    <input formControlName="email" type="email" placeholder="E-MAIL*" id="email" class="cssInput">
     <div *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched" class="error-message">
         Por favor, insira um e-mail válido
     </div>
     
     <label>Tel.:</label>
-    <input formControlName="telefone" type="text" placeholder="TELEFONE*" id="telefone" 
+    <input formControlName="telefone" type="text" placeholder="TELEFONE*" id="telefone" class="cssInput"
            (input)="formatPhoneNumber($event)">
     <div *ngIf="contactForm.get('telefone')?.invalid && contactForm.get('telefone')?.touched" class="error-message">
         Telefone é obrigatório
     </div>
     
     <label>Tipo de contato:</label>
-    <select formControlName="tipoContato" id="contato">
+    <select formControlName="tipoContato" id="contato" class="cssInput">
         <option value="" disabled selected>TIPO DE CONTATO</option>
         <option value="1">Elogio</option>
         <option value="2">Reclamação</option>
@@ -35,6 +35,18 @@
     <textarea formControlName="mensagem" class="mensagem-contato" id="mensagem" placeholder="MENSAGEM*"></textarea>
     <div *ngIf="contactForm.get('mensagem')?.invalid && contactForm.get('mensagem')?.touched" class="error-message">
         Mensagem é obrigatória
+    </div>
+
+    <div class="form-check mb-2">
+        <input type="checkbox" 
+                formControlName="termosAceitos"
+                class="form-check-input" 
+                style="border: 1px solid rgba(0, 0, 0, 0.562);" 
+                id="validationFormCheck1">
+        <label class="form-check-label" for="validationFormCheck1">Eu li e concordo com estes <a href="https://www.ford.com.br/politica-de-privacidade/">termos e condições</a></label>
+        <div *ngIf="contactForm.get('termosAceitos')?.invalid && contactForm.get('termosAceitos')?.touched" class="error-message">
+            Por favor, leia nossos termos e condições!
+        </div>
     </div>
     
     <button type="submit" class="button-contato">Enviar</button>
@@ -54,3 +66,67 @@
         </div>
     </div>
 </form>
+
+<dialog id="compare">
+    <table>
+        <tbody>
+        <tr >
+        <td>&nbsp;</td>
+        <td id="compare_image_0"><img src="" id="imgCompare0" class="iconTable"></td>
+        <td id="compare_image_1"><img src="" id="imgCompare1" class="iconTable"></td>
+        </tr>
+        <tr >
+        <td>Modelo</td>
+        <td id="compare_modelo_0"></td>
+        <td id="compare_modelo_1"></td>
+        </tr>
+        <tr >
+        <td>Altura da ca&ccedil;amba (mm)</td>
+        <td id="compare_alturacacamba_0"></td>
+        <td id="compare_alturacacamba_1"></td>
+        </tr>
+        <tr >
+        <td >Altura do ve&iacute;culo (mm)</td>
+        <td id="compare_alturaveiculo_0"></td>
+        <td id="compare_alturaveiculo_1"></td>
+        </tr>
+        <tr>
+        <td>Altura livre do solo (mm)</td>
+        <td id="compare_alturasolo_0"></td>
+        <td id="compare_alturasolo_1"></td>
+        </tr>
+        <tr >
+        <td >Capacidade de carga (Kg)</td>
+        <td id="compare_capacidadecarga_0"></td>
+        <td id="compare_capacidadecarga_1"></td>
+        </tr>
+        <tr >
+        <td >Motor</td>
+        <td id="compare_motor_0"></td>
+        <td id="compare_motor_1"></td>
+        </tr>
+        <tr >
+        <td >Pot&ecirc;ncia (cv)</td>
+        <td id="compare_potencia_0"></td>
+        <td id="compare_potencia_1"></td>
+        </tr>
+        <tr >
+        <td >Volume de ca&ccedil;amba (L)</td>
+        <td id="compare_volumecacamba_0"></td>
+        <td id="compare_volumecacamba_1"></td>
+        </tr>
+        <tr >
+        <td >Roda</td>
+        <td id="compare_roda_0"></td>
+        <td id="compare_roda_1"></td>
+        </tr>
+        <tr >
+        <td >Pre&ccedil;o</td>
+        <td id="compare_preco_0"></td>
+        <td id="compare_preco_1"></td>
+        </tr>
+        </tbody>
+        
+    </table>
+    <button class="buttonComparar" type="button" style="height: 40px; width: 90%;" onclick="HideCompare()">Fechar</button>
+</dialog>

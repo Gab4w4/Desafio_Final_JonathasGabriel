@@ -21,5 +21,17 @@ export class LoginService {
     )
 
   }
+
+  localStorageLogin(nome: string, senha: string): Observable<User> {
+    return this.http.post<User>("http://localhost:3001/login", { nome, senha})
+    .pipe(
+      tap(
+        (user) => {
+          localStorage.setItem("email", user.email)
+        }
+      )
+    )
+
+  }
 }
 
